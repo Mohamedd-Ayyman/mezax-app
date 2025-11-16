@@ -28,6 +28,19 @@ export default function RootLayout({ children }) {
             <div className="flex justify-end items-center relative">
               <div className="flex mr-4 items-center">
                 <Link
+                  href="/"
+                  className="flex items-center relative cursor-pointer whitespace-nowrap inline-block py-2 px-3 hover:bg-gray-200 hover:text-black rounded-full"
+                >
+                  Home
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex-initial">
+            <div className="flex justify-end items-center relative">
+              <div className="flex mr-4 items-center">
+                <Link
                   href="/articles"
                   className="flex items-center relative cursor-pointer whitespace-nowrap inline-block py-2 px-3 hover:bg-gray-200 hover:text-black rounded-full"
                 >
