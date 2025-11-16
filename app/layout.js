@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +23,46 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav className=" bg-black w-full flex relative justify-center items-center mx-auto px-8 h-20 text-2xl ">
+          <div className="flex-initial">
+            <div className="flex justify-end items-center relative">
+              <div className="flex mr-4 items-center">
+                <Link
+                  href="/articles"
+                  className="flex items-center relative cursor-pointer whitespace-nowrap inline-block py-2 px-3 hover:bg-gray-200 hover:text-black rounded-full"
+                >
+                  Articles
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex-initial">
+            <div className="flex justify-end items-center relative">
+              <div className="flex mr-4 items-center">
+                <Link
+                  href="/posts"
+                  className="flex items-center relative cursor-pointer whitespace-nowrap inline-block py-2 px-3 hover:bg-gray-200 hover:text-black rounded-full"
+                >
+                  Posts
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex-initial">
+            <div className="flex justify-end items-center relative">
+              <div className="flex mr-4 items-center">
+                <Link
+                  href="./articles/featuredArticles"
+                  className="flex items-center relative cursor-pointer whitespace-nowrap inline-block py-2 px-3 hover:bg-gray-200 hover:text-black rounded-full"
+                >
+                  Featured Articles
+                </Link>
+              </div>
+            </div>
+          </div>
+        </nav>
         {children}
       </body>
     </html>
